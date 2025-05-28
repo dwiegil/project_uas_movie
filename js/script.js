@@ -15,19 +15,19 @@ $('#search-button').on('click', function () {
                 $.each(movies, function(i, data) {
                     $('#movie-list').append(`
                         <div class="col-md-4">
-                        <div class="card">
+                        <div class="card mb-3">
                             <img src="${data.Poster}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">${data.Title}</h5>
-                                    <p class="card-text">${data.Year}</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">${data.Year}</h6>
+                                    <a href="#" class="card-link">See Detail</a>
                                 </div>
                             </div>
                         </div>
                     `);
                 });
 
-
+                $('#search-input').val('');
 
             } else {
                 $('#movie-list').html(`
